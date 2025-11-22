@@ -8,42 +8,81 @@
 html, body {
   width: 100%;
   height: 100%;
+}
+
+body{
   overflow: hidden;
 }
 
 main{
   width: 100%;
   height: 100%;
-  background: #060606;
+  background: #0d0d0d;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 1rem;
-  padding: 2rem;
+
 }
 
-button{
-  background-color: rgb(109, 185, 253);
-  padding: 10px 20px;
-  margin-top: 20px;
-  border: 2px solid rgba(32,31,31,0.6);
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: 600;
-  letter-spacing: 0.4px;
-  transition: transform .12s ease, box-shadow .12s ease;
-}
-
-button:active{
-  transform: scale(0.96);
+.card p{
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 20px;
+  font-weight: 500;
 }
 
 
-h1 {
-  font-size: 1rem;
+.card p span{
   font-weight: 700;
-
+  color: rgb(240, 167, 255);
 }
 
+.card {
+  width: 450px;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+ padding: 30px;
+}
 
+.outer {
+  height: 20px;
+  width: 100%;
+  border-radius: 50px;
+  background-color: lightgray;
+}
+
+.inner {
+  height: 100%;
+  width: 0%;
+  border-radius: 50px;
+  background-color: green;
+}
+
+.bottom{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.bottom h2{
+  font-size: 40px;
+  font-family: monospace;
+}
+
+.bottom button{
+  padding: 12px 25px;
+  background-color: rgb(74, 175, 247);
+  color: white;
+  border-radius: 5px;
+  font-size: 15px;
+
+  font-weight: 600;
+  border: 0;
+  cursor: pointer;
+}
+
+.bottom button:active{
+  scale: 0.95;
+}

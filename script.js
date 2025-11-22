@@ -1,29 +1,28 @@
-arr = ['i love js', 'js is awesome', 'js is fun', 'Sheriyans is best', 'Harsh Bhaiya is great', 'I love coding', 'Coding is life', 'Frontend development is cool', 'Sarthak Bhaiya is awesome']
 
-var btn = document.querySelector("button")
-var main = document.querySelector("main")
+var grow = 0
+var btn = document.querySelector('button')
+var h2 = document.querySelector('h2')
+var inner = document.querySelector('.inner')
 
-btn.addEventListener("click", function() {
+btn.addEventListener('click',function(){
+    btn.style.pointerEvents = 'none'
+    
+    var num = 50 + Math.floor(Math.random()*50)
+    
+    console.log('Your file will be downloaded in',num/10,'seconds');
 
-  
- var h1 = document.createElement('h1')
- h1.innerHTML = arr[Math.floor(Math.random()*arr.length)]
-main.appendChild(h1)
+    var int = setInterval(() => {
+        grow++
+        h2.innerHTML = grow+'%'
+        inner.style.width = grow+'%'
+    },num);
 
-var c1 = Math.floor(Math.random()*256)
-var c2 = Math.floor(Math.random()*256)
-var c3 = Math.floor(Math.random()*256)
+    setTimeout(() => {
+        clearInterval(int)
+        btn.innerHTML = 'Downloaded'
+        btn.style.opacity = 0.5
+    }, num*100);
 
-
-var x = Math.random()*100
-var y = Math.random()*100
-var rotate = Math.random()*360
-
-h1.style.position = 'absolute'
-h1.style.color =`rgb(${c1},${c2},${c3})`
-h1.style.left = x +'%'
-h1.style.top = y +'%'
-h1.style.rotate= rotate + 'deg'
- }
-);
-
+    
+    
+})
